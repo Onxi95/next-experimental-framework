@@ -3,10 +3,9 @@ import { useRouter } from "next/navigation";
 import { DummyComponent } from "./DummyComponent";
 import { SearchParam } from "./SearchParam";
 import { Suspense } from "react";
+import { RoutePush } from "./RoutePush";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <DummyComponent />
@@ -36,22 +35,7 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <button
-          className="bg-slate-600 p-5 rounded-md"
-          onClick={() => router.push('/?search="something"')}
-        >
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          set "search" to "something" (button route push)
-        </button>
-        <br />
-        <br />
-        <br />
-        <button
-          className="bg-slate-600 p-5 rounded-md"
-          onClick={() => router.push("/")}
-        >
-          go back to / (button route push)
-        </button>
+        <RoutePush />
       </div>
     </main>
   );
