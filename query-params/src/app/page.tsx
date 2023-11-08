@@ -3,7 +3,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const q = useSearchParams();
@@ -27,6 +27,8 @@ export default function Home() {
         <Link className="bg-slate-600 p-5 rounded-md" href={"/"}>
           go back to /
         </Link>
+        <br />
+        <br />
         <br />
         <button
           className="bg-slate-600 p-5 rounded-md"
