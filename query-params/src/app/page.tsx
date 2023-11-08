@@ -1,6 +1,5 @@
 "use client";
 
-import { Metadata } from "next";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -40,7 +39,10 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <button className="bg-slate-600 p-5 rounded-md">
+        <button
+          className="bg-slate-600 p-5 rounded-md"
+          onClick={() => router.push("/")}
+        >
           go back to / (button route push)
         </button>
       </div>
