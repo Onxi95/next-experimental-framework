@@ -1,16 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { stateContext } from "./StateProvider";
 
 export const DummyComponent = () => {
-  const [number, setNumber] = useState(0);
+  const { state, setState } = useContext(stateContext);
   return (
     <div className="flex justify-center mt-10">
       <button
         className="bg-slate-900 p-5 rounded-md"
-        onClick={() => setNumber((prev) => prev + 1)}
+        onClick={() => setState((prev) => prev + 1)}
       >
-        increment number: {number}
+        increment number: {state}
       </button>
     </div>
   );

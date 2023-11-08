@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { DummyComponent } from "./DummyComponent";
 
 export default function Home() {
   const q = useSearchParams();
@@ -10,6 +11,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <DummyComponent />
       <div>
         search: {q.get("search")}
         <br />

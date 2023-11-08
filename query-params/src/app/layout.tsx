@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { DummyComponent } from "./DummyComponent";
+import { StateProvider } from "./StateProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <DummyComponent />
-        {children}
+        <StateProvider>{children}</StateProvider>
       </body>
     </html>
   );
