@@ -1,12 +1,10 @@
-"use client";
-
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { DummyComponent } from "./DummyComponent";
+import { SearchParam } from "./SearchParam";
+import { Suspense } from "react";
 
 export default function Home() {
-  const q = useSearchParams();
   const router = useRouter();
 
   return (
@@ -16,7 +14,9 @@ export default function Home() {
         <br />
         <br />
         <br />
-        search: {q.get("search")}
+        <Suspense fallback={<div>loading...</div>}>
+          <SearchParam />
+        </Suspense>
         <br />
         <br />
         <br />
