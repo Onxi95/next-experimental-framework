@@ -40,7 +40,7 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <button className="bg-slate-600 p-5 rounded-md" href={"/"}>
+        <button className="bg-slate-600 p-5 rounded-md">
           go back to / (button route push)
         </button>
       </div>
