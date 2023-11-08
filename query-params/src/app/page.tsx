@@ -13,7 +13,12 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <DummyComponent />
       <div>
+        <br />
+        <br />
+        <br />
         search: {q.get("search")}
+        <br />
+        <br />
         <br />
         <Link
           className="bg-slate-600 p-5 rounded-md"
