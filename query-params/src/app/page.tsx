@@ -17,24 +17,6 @@ export default function Home() {
           <SearchParam />
         </Suspense>
         <br />
-        <br />
-        <br />
-        <Link
-          className="bg-slate-600 p-5 rounded-md"
-          href={'/?search="something"'}
-        >
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          set "search" to "something"
-        </Link>
-        <br />
-        <br />
-        <br />
-        <Link className="bg-slate-600 p-5 rounded-md" href={"/"}>
-          go back to /
-        </Link>
-        <br />
-        <br />
-        <br />
         <RoutePush />
       </div>
     </main>
